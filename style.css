@@ -1,25 +1,117 @@
-#logo{
-    float: left;
+h1, h2, h3{
+    font-family: "Open Sans";
 }
 
-#h1-title{
-    float: left;
+html{
+    font-family: "Quicksand";
+}
+
+#logo{
+    position: absolute;
 }
 
 #topmenu{
     float: left;
-    width: 50%;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
 }
 
-#topmenu ul{
-    list-style-type: none;
+#topmenu a{
+    text-decoration: none;
+    text-align: center;
+    color: #2c3e50; 
 }
 
-#topmenu li{
-    display: inline-block;
+#topmenu .links{
+    border-bottom: 5px transparent;
+    margin-right: 30px;
+    padding-bottom: 20px;
+    width: auto;
+}
+
+#topmenu .links:hover{
+    border-bottom: 5px solid #1abc9c;
 }
 
 #shopping-cart{
     float: right;
-    font-size: 2.5em;
+    font-size: 1.5em;
+}
+
+#topmenu #shopping-cart:hover{
+    color: #1abc9c;
+}
+
+#topmenu #shopping-cart-counter{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: .5em;
+    top: 65px;
+    color: #fff;
+    border-radius: 100px;
+    background-color: #f1c40f;
+    right: 25px;
+    font-size: .5em;
+}
+
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+#container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#container h1{
+    text-align: center;
+}
+
+#container ul{
+    list-style-type: none;
+}
+
+.product-container img{
+    width: auto;
+}
+
+#container li{
+    margin: 0 25px 25px 0;
+    width: 18%;
+    text-align: center;
+    display: inline-block;
 }
