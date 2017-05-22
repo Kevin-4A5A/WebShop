@@ -1,0 +1,25 @@
+#logo{
+    float: left;
+}
+
+#h1-title{
+    float: left;
+}
+
+#topmenu{
+    float: left;
+    width: 50%;
+}
+
+#topmenu ul{
+    list-style-type: none;
+}
+
+#topmenu li{
+    display: inline-block;
+}
+
+#shopping-cart{
+    float: right;
+    font-size: 2.5em;
+}
