@@ -105,13 +105,15 @@ html{
     list-style-type: none;
 }
 
-.product-container img{
-    width: auto;
-}
-
 #container li{
     margin: 0 25px 25px 0;
     width: 18%;
     text-align: center;
     display: inline-block;
+}
+
+.product-header{
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 300px;
 }
