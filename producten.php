@@ -1,8 +1,14 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+include("DbHandler.php");
+?>
 <!DOCTYPE html>
 <html>
 
     <body>
-        <?php require("header.php");
+        <?php
+        require("header.php");
         get_header();
         ?>
         <div class="row">
@@ -10,12 +16,28 @@
                 <h1>Producten</h1>
                 <ul>
                     <?php
-                    $backgroundimage = array("images/product.png", "images/logo_header.png");
-                    foreach ($backgroundimage as $product) {
-                        echo "<li><div class='product-container'><div class='product-header' style='background-image: url(" . $product . ")'></div><div class='post-entry'><div class='post-title'><strong>Lorem ipsum</strong></div>Prijs: 500 euro<br><button>Bestellen</button></div></div></li>";
+                    $test = new DbHandler('localhost', 'mydb', 'root', '');
+
+
+                    $sql = "SELECT * FROM `tekst` LIMIT 0, 30";
+                    $res = $test->readData($sql);
+
+                    foreach ($res as $row) {
+                        foreach ($row as $key => $value) {
+                            echo '<div class="col-2" style="border: 1px solid black; text-align: center;">';
+                            echo $value;
+                            echo '</div>';
+                        }
                     }
+
+//                        foreach ($stmt as $row) {
+//                            echo "<div style='border: 1px solid black; display: inline-block;'>" . $row[1] . "</div>";
+//                        }
+//                    $backgroundimage = array("images/product.png", "images/logo_header.png");
+//                    foreach ($backgroundimage as $product) {
+//                        echo "<li class='producten-list'><div class='product-container'><div class='product-header' style='background-image: url(" . $product . ")'></div><div class='post-entry'><div class='post-title'><strong>Lorem ipsum</strong></div>Prijs: 500 euro<br><button>Bestellen</button></div></div></li>";
+//                    }
                     ?>
-    <!--                <li><div class="product-container"><img src="images/product.png"><div class="post-entry"><div class="post-title"><strong>Lorem ipsum</strong></div>Prijs: 500 euro<br><button>Bestellen</button></div></div></li>-->
                 </ul>
             </div>
         </div>

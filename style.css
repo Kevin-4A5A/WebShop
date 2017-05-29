@@ -105,7 +105,7 @@ html{
     list-style-type: none;
 }
 
-#container li{
+#container .producten-list{
     margin: 0 25px 25px 0;
     width: 18%;
     text-align: center;
